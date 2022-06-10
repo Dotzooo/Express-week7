@@ -8,7 +8,8 @@ const { uploadImgur } = require('../service/upload')
 const uploadFile = {
     async uploadImage(req, res, next) {
         const { files } = req;
-        if (!files.length) {
+        
+        if (!files || !files.length) {
             return appError(400, '尚未上傳檔案', next)
         }
 
@@ -23,7 +24,7 @@ const uploadFile = {
         } else {
             handleSuccess(res, response.data.link)
         }
-        
+
     }
 }
 
