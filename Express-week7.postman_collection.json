@@ -312,7 +312,7 @@
 				"header": [
 					{
 						"key": "authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTJkOTY2ZWUyYTI5NjVmMTFkNzc4YiIsImlhdCI6MTY1NDgzOTY1NSwiZXhwIjoxNjU1NDQ0NDU1fQ.Ug-RIy97q4p7bPjp6uUw0L5M94LlV2bHLCQ9CQ0xAPY",
 						"type": "text"
 					}
 				],
@@ -320,7 +320,7 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "",
+							"key": "files",
 							"type": "file",
 							"src": []
 						}
@@ -363,7 +363,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "https://express-week7.herokuapp.com/",
+			"value": "https://express-week7.herokuapp.com",
 			"type": "string"
 		}
 	]
