@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "e8ff3440-003e-4388-b9cc-bb6876bdf2aa",
+		"name": "Express-week6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12172279"
+	},
+	"item": [
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Adam\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/singup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"singup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"1q2w3e4r\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/singin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改密碼",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1ODg4NywiZXhwIjoxNjU0NzYzNjg3fQ.PGJO2jgogzKQDE9P6QzlmWLkoYKGvSmfXIF3NjF9hzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"1q2w3e4r\",\r\n    \"confirmPassword\": \"1q2w3e4r\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/updatePassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得個人資料",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/users/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新個人資料",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"tony\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有貼文",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/posts?timeSort=asc&q=",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						},
+						{
+							"key": "q",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": \"6298195c4946cbaea7200961\",\r\n    \"name\": \"Adam\",\r\n    \"tags\": \"發文測試\",\r\n    \"type\": \"person\",\r\n    \"content\": \"TEST\",\r\n    \"image\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"修改貼文測試\",\r\n    \"image\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/post/6298272aed549c9f16e1705d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"post",
+						"6298272aed549c9f16e1705d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/post/62982ecfc21352b601aa4a5d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"post",
+						"62982ecfc21352b601aa4a5d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/posts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://express-week6.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
