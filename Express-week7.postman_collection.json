@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "e8ff3440-003e-4388-b9cc-bb6876bdf2aa",
-		"name": "Express-week6",
+		"_postman_id": "e67aa32c-eda2-48c8-a236-4c469f098edf",
+		"name": "Express-week7",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "12172279"
 	},
@@ -304,6 +304,40 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "上傳圖檔",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTg3MmM0ZjU2Njk4NGVhMDhlNTQzOCIsImlhdCI6MTY1NDE1OTg2MCwiZXhwIjoxNjU0NzY0NjYwfQ.SoOrAV7h-mQGvIq9enhRajUL9acxYX0yaUHRLbKD3QM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/file/image",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"file",
+						"image"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -329,7 +363,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "https://express-week6.herokuapp.com",
+			"value": "https://express-week7.herokuapp.com/",
 			"type": "string"
 		}
 	]
